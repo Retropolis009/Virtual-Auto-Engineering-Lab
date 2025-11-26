@@ -83,7 +83,7 @@
     .cta-btn:hover { transform: translateY(-3px); }
 
     .hero-image img {
-      width: 700px;
+      width: 800px;
       border-radius: 20px;
       box-shadow: 0 0 40px rgba(0, 123, 255, 0.2);
     }
@@ -124,7 +124,7 @@
 <body>
 
 <header>
-  <div class="logo">Ali Tracker</div>
+  <div class="logo">Virtual Auto Engineering Lab</div>
   <nav>
     <ul>
       <li><a href="#features">Features</a></li>
@@ -217,6 +217,7 @@
   // --- Backend-driven product rendering ---
   async function loadProducts() {
     const res = await fetch("http://127.0.0.1:8000/parts");
+    //const res = await fetch("parts.json");
     const data = await res.json(); // { parts: [{id, price}, ...] }
 
     const grid = document.getElementById("products-grid");
@@ -255,10 +256,10 @@
 
   function getImageURL(id){
     switch(id){
-      case 'ex2': return 'https://images.unsplash.com/photo-1617788138017-80a40a86c09e?auto=format&fit=crop&w=900&q=70';
-      case 'in2': return 'https://images.unsplash.com/photo-1606220838315-056192d5d862?auto=format&fit=crop&w=900&q=70';
-      case 'rm2': return 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=70';
-      case 'tu2': return 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=70';
+      case 'ex2': return 'https://www.thedrive.com/wp-content/uploads/images-by-url-td/content/2020/09/Depositphotos_256345410_xl-2015.jpg?quality=85&w=1920';
+      case 'in2': return 'https://dt565gqrz3z7y.cloudfront.net/ce/image/sExR6Jz4uKPQOi7YEoSh6g.jpg';
+      case 'rm2': return 'https://smartrepairswarwick.com/wp-content/uploads/2023/04/AdobeStock_141724914-1024x683.jpg';
+      case 'tu2': return 'https://cdn.shopify.com/s/files/1/0389/3234/8973/t/3/assets/nelson-racing-tt-budget-540-main-pg2.png?v=1654660025';
       default: return '';
     }
   }
