@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Auto Engineering Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background: #0f0f0f; color: #fff; }
+
+    header {
+      width: 100%;
+      padding: 22px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
+
+    nav ul { display: flex; gap: 36px; list-style: none; }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 400;
+      opacity: 0.8;
+      transition: 0.2s;
+    }
+    nav ul li a:hover { opacity: 1; }
+
+    .hero {
+      width: 100%;
+      padding: 110px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-text { max-width: 600px; }
+    .hero-text h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      font-weight: 700;
+    }
+    .hero-text p {
+      margin-top: 16px;
+      font-size: 18px;
+      opacity: 0.75;
+      line-height: 1.6;
+    }
+
+    .cta-btn {
+      margin-top: 32px;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #007aff, #0060df);
+      border-radius: 14px;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #fff;
+      transition: 0.2s;
+    }
+    .button{
+      margin-top: 32px;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #ffffff, #ffffff);
+      border-radius: 14px;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #100404;
+      transition: 0.2s;
+    }
+
+    .cta-btn:hover { transform: translateY(-3px); }
+
+    .hero-image img {
+      width: 700px;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0, 123, 255, 0.2);
+    }
+
+    .section {
+      padding: 100px 50px;
+      text-align: center;
+    }
+
+    .section h2 { font-size: 40px; margin-bottom: 20px; }
+    .section p { font-size: 18px; opacity: 0.75; max-width: 700px; margin: 0 auto; }
+
+    .features {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+    }
+
+    .feature-box {
+      background: #141414;
+      padding: 35px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      text-align: left;
+      transition: 0.25s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 24px rgba(0, 123, 255, 0.18);
+    }
+
+    .feature-box h3 { margin-bottom: 12px; font-size: 22px; }
+    .feature-box p { opacity: 0.7; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Ali Tracker</div>
+  <nav>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Track Your Car Maintenance<br />The Smarter Way</h1>
+    <p>
+      A clean, simple, and modern platform to log services, schedule reminders, and keep your vehicle running at its best — effortlessly.
+    </p>
+    <button class="cta-btn">Get Started</button>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" />
+  </div>
+</section>
+
+<section class="section" id="features">
+  <h2>Powerful Yet Simple Features</h2>
+  <p>Everything you need to stay on top of your car's health — without complicating your life.</p>
+
+  <div class="features">
+    <div class="feature-box">
+      <h3>📅 Service Reminders</h3>
+      <p>Receive alerts for oil change, tuning, filters and more based on date or mileage.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>🧾 Service History Log</h3>
+      <p>Easily record previous services with cost, mileage, parts replaced and workshop details.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>📊 Analytics</h3>
+      <p>View maintenance cost summary, monthly logs, and car health insights.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>🚗 Multi-Car Support</h3>
+      <p>Track maintenance for as many cars as you want — all in one dashboard.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETPLACE & BUILDER -->
+<section class="section" id="marketplace">
+  <h2>Performance Parts Marketplace & Builder</h2>
+  <p>Browse premium, real-world parts and add them to your build with a cleaner, more professional UI.</p>
+
+  <div style="display:flex;gap:32px;align-items:flex-start;margin-top:40px;flex-wrap:wrap;">
+
+    <!-- Products grid -->
+    <div style="flex:1;min-width:420px;">
+      <div id="products-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;"></div>
+    </div>
+
+    <!-- Builder Sidebar -->
+    <div style="width:360px;min-width:300px;">
+      <div class="feature-box" style="border-radius:16px;padding:20px;box-shadow:0 4px 16px rgba(0,0,0,0.06)">
+        <h3 style="margin-bottom:8px;font-size:19px">Current Build</h3>
+        <div class="muted" id="build-empty">No parts added yet. Start assembling your build.</div>
+
+        <div id="build-list" style="margin-top:14px;display:flex;flex-direction:column;gap:10px"></div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px">
+          <div class="muted">Total:</div>
+          <div style="font-weight:800;font-size:20px" id="build-total">$0</div>
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <button class="cta-btn" onclick="saveBuild()" style="flex:1;font-weight:700">Save Build</button>
+          <button class="button" onclick="clearBuild()" style="flex:1">Clear</button>
+        </div>
+        <div style="height:14px"></div>
+        <div class="muted" style="font-size:13px">Your saved build will appear in your Garage dashboard.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const build = { parts: [] };
+
+  // --- Backend-driven product rendering ---
+  async function loadProducts() {
+    const res = await fetch("http://127.0.0.1:8000/parts");
+    const data = await res.json(); // { parts: [{id, price}, ...] }
+
+    const grid = document.getElementById("products-grid");
+    grid.innerHTML = '';
+
+    data.parts.forEach(p => {
+      let name = p.id; 
+      let type = 'generic';
+
+      switch(p.id){
+        case 'ex2': name='HKS Hi-Power Exhaust'; type='exhaust'; break;
+        case 'in2': name='K&N High-Flow Intake'; type='intake'; break;
+        case 'rm2': name='BBS 18" Forged Rims'; type='rims'; break;
+        case 'tu2': name='Garrett GTX Turbo'; type='turbo'; break;
+      }
+
+      const card = document.createElement("div");
+      card.className = 'feature-box';
+      card.style.textAlign = 'center';
+      card.style.padding = '18px';
+      card.style.borderRadius = '16px';
+      card.style.boxShadow = '0 4px 16px rgba(0,0,0,0.06)';
+
+      const safeName = name.replace(/"/g, '\\"');
+
+      card.innerHTML = `
+        <img src="${getImageURL(p.id)}" style="width:100%;height:150px;object-fit:cover;border-radius:14px" />
+        <div style="margin-top:12px;font-weight:700;font-size:17px">${name}</div>
+        <div class="muted" style="font-size:13px;margin-top:6px">${getPartDescription(p.id)}</div>
+        <div style="margin-top:12px;font-size:17px;font-weight:700">$${p.price}</div>
+        <button class="cta-btn" style="margin-top:14px;background:linear-gradient(135deg,#4a148c,#7b1fa2);color:white;font-weight:700" onclick='addToBuild({id:"${p.id}",name:"${safeName}",type:"${type}"})'>Add to Build</button>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  function getImageURL(id){
+    switch(id){
+      case 'ex2': return 'https://images.unsplash.com/photo-1617788138017-80a40a86c09e?auto=format&fit=crop&w=900&q=70';
+      case 'in2': return 'https://images.unsplash.com/photo-1606220838315-056192d5d862?auto=format&fit=crop&w=900&q=70';
+      case 'rm2': return 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=70';
+      case 'tu2': return 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=70';
+      default: return '';
+    }
+  }
+
+  function getPartDescription(id){
+    switch(id){
+      case 'ex2': return 'Aggressive deep tone • JDM favorite';
+      case 'in2': return 'Sharper throttle response • Cooler air';
+      case 'rm2': return 'Ultra-lightweight • Premium look';
+      case 'tu2': return 'More boost • Faster spool • Race-ready';
+      default: return '';
+    }
+  }
+
+  // --- Build system ---
+  function addToBuild(part){
+    const existingIndex = build.parts.findIndex(p => p.type === part.type);
+    if(existingIndex !== -1) build.parts.splice(existingIndex,1,part);
+    else build.parts.push(part);
+    renderBuild();
+  }
+
+  async function renderBuild(){
+    const list = document.getElementById('build-list');
+    const empty = document.getElementById('build-empty');
+    list.innerHTML = '';
+
+    if(build.parts.length === 0){ 
+      empty.style.display = 'block'; 
+      document.getElementById('build-total').textContent = '$0'; 
+      return; 
+    }
+
+    empty.style.display = 'none';
+
+    const response = await fetch("http://127.0.0.1:8000/calculate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ parts: build.parts })
+    });
+    const data = await response.json();
+
+    build.parts.forEach(part => {
+      const item = data.items.find(i => i.id === part.id);
+      const price = item ? item.price : 0;
+
+      const el = document.createElement('div');
+      el.style.display = 'flex'; 
+      el.style.justifyContent = 'space-between';
+      el.style.alignItems = 'center';
+      el.style.padding = '8px'; 
+      el.style.borderRadius = '8px'; 
+      el.style.background = 'rgba(255,255,255,0.02)';
+      el.innerHTML = `<div style="font-weight:600">${part.name}</div><div style="font-weight:800">$${price}</div>`;
+      list.appendChild(el);
+    });
+
+    document.getElementById('build-total').textContent = "$" + data.total_price;
+  }
+
+  function saveBuild(){
+    const saved = JSON.parse(localStorage.getItem('savedBuilds') || '[]');
+    const timestamp = new Date().toISOString();
+    const payload = { id: 'b_' + Date.now(), parts: build.parts, created_at: timestamp };
+    saved.push(payload); 
+    localStorage.setItem('savedBuilds', JSON.stringify(saved));
+    alert('Build saved to local storage.');
+  }
+
+  function clearBuild(){ build.parts = []; renderBuild(); }
+
+  // Initialize
+  renderBuild();
+  loadProducts();
+</script>
+
+</body>
+</html>
